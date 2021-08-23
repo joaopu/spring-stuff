@@ -48,6 +48,9 @@ class SomeClientTest {
 		assertFalse(cv.getAddress().equals(cvEmpty.getAddress()));
 		assertFalse(cv.getCertification().equals(cvEmpty.getCertification()));
 		
+		cvBuilderService.createCVBuilder1();
+		cvBuilderService.createCVBuilder1();
+		cvBuilderService.createCVBuilder1();		
 	}
 	
 
