@@ -17,13 +17,13 @@ public class CVBuilder {
 	
 	private String presentation;
 	
-	private String [] graduation; // graduation or undergraduation
+	private String [] graduation; // graduation or under graduation
 	private String [] specialization; // MBA or some other specialization
 	private String [] certification;  // course certification
 	private String [] masterDegree;  // master degree
 	private String [] pHD;  // phd
 	private String [] continuedEducationCourse; // extension course in a specific area
-	private String [] language; // language like: engliish, portuguese, etc.
+	private String [] language; // language like: English, Portuguese, etc.
 	
 	public CVBuilder withName(String name) {
 		this.name = name;

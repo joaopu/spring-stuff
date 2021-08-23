@@ -28,7 +28,6 @@ import br.joaopu.pattern.builder.service.SomeClient;
  * https://www.baeldung.com/junit-5-runwith
  * https://start.spring.io/
  * 
- * 
  * https://medium.com/@pziobron/spring-style-builder-pattern-296868bab815   
  * 
  * @author JoãoCarlosPurificaçã
@@ -45,7 +44,6 @@ class ApplicationTests {
 	@Test
 	void test1() {
 		CVBuilder builder1 = cvBuilderService.createCVBuilder();
-		
 		
 		CurriculumVitae cv = someClient.buildCurriculamVitae();
 		CurriculumVitae cvEmpty = someClient.buildCurriculamVitaeEmpty();

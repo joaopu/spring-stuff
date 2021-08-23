@@ -9,7 +9,7 @@ public class CurriculumVitae {
 	
 	private String presentation;
 	
-	private String [] graduation; // graduation or undergraduation
+	private String [] graduation; // graduation or under graduation
 	private String [] specialization; // MBA or some other specialization
 	private String [] certification;  // course certification
 	private String [] continuedEducationCourse; // extension course in a specific area
@@ -17,7 +17,7 @@ public class CurriculumVitae {
 	private String[] masterDegree;
 	private String[] pHD;
 	
-	private String [] language; // language like: engliish, portuguese, etc.
+	private String [] language; // language like: English, Portuguese, etc.
 	
 	private String[] professionalExperience;
 

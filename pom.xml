@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.joaopu</groupId>
-	<artifactId>pattern.builder</artifactId>
+	<artifactId>spring.stuff</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pattern.builder</name>
 	<description>Demo project for Spring Boot Builder Pattern </description>
