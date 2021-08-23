@@ -16,12 +16,6 @@ import br.joaopu.pattern.builder.service.CVBuilder;
 import br.joaopu.pattern.builder.service.CVBuilderService;
 import br.joaopu.pattern.builder.service.SomeClient;
 
-
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(classes= {SomeClient.class, CVBuilderService.class, CVBuilder.class})
-@EnableAutoConfiguration
-
-
 /**
  * Ref:
  * https://www.baeldung.com/spring-bean-scopes
@@ -33,30 +27,38 @@ import br.joaopu.pattern.builder.service.SomeClient;
  * @author JoãoCarlosPurificaçã
  *
  */
-class ApplicationTests {
+
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(classes= {SomeClient.class, CVBuilderService.class, CVBuilder.class})
+@EnableAutoConfiguration
+class SomeClientTest {
 	
 	@Inject
 	private SomeClient someClient;
 	
 	@Inject
 	private CVBuilderService cvBuilderService;
-
+	
 	@Test
-	void test1() {
-		CVBuilder builder1 = cvBuilderService.createCVBuilder();
+	void testWithNewCVBuilderCreation() {
 		
 		CurriculumVitae cv = someClient.buildCurriculamVitae();
 		CurriculumVitae cvEmpty = someClient.buildCurriculamVitaeEmpty();
 		
-		CurriculumVitae cv1 = someClient.buildCurriculamVitae1();
-		CurriculumVitae cv1Empty = someClient.buildCurriculamVitae1Empty();
-		
 		assertFalse(cv.getAddress().equals(cvEmpty.getAddress()));
 		assertFalse(cv.getCertification().equals(cvEmpty.getCertification()));
 		
+	}
+	
+
+	@Test
+	void testWithSameCVBuilder() {
+		
+		CurriculumVitae cv1 = someClient.buildCurriculamVitae1();
+		CurriculumVitae cv1Empty = someClient.buildCurriculamVitae1Empty();
+		
 		assertTrue(cv1.getAddress().equals(cv1Empty.getAddress()));
 		assertTrue(cv1.getCertification().equals(cv1Empty.getCertification()));
-		
 		
 	}
 
