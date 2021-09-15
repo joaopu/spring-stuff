@@ -2,6 +2,7 @@ package br.joaopu.pattern.decorator.domain;
 
 import java.util.Arrays;
 
+
 public class BasicLunch extends AbstractLunch {
 	public BasicLunch() {
 		setComponents(Arrays.asList(MENU_COMPONENT.values()));

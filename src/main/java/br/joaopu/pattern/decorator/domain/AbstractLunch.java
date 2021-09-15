@@ -1,5 +1,6 @@
 package br.joaopu.pattern.decorator.domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -16,7 +17,9 @@ public abstract class AbstractLunch implements Costable {
 		this.components.add(component);
 	}
 	
-	public AbstractLunch() {}
+	public AbstractLunch() {
+		this.components = new ArrayList<>();
+	}
 	
 	public String getCode() {
 		return code;
