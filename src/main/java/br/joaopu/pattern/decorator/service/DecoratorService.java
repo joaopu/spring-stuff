@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 import br.joaopu.pattern.decorator.domain.BasicLunch;
 import br.joaopu.pattern.decorator.domain.ChickenLunchDecorator;
+import br.joaopu.pattern.decorator.domain.FritsLunchDecorator;
 
 @Named
 public class DecoratorService {
@@ -22,6 +23,9 @@ public class DecoratorService {
 	@Qualifier("doubleChickenLunch")
 	private ChickenLunchDecorator doubleChickenLunch;
 	
+	@Inject
+	private FritsLunchDecorator fritsLunch;
+	
 	public Double costBasicLunch() {
 		return basicLunch.cost();
 	}
@@ -34,12 +38,9 @@ public class DecoratorService {
 		return doubleChickenLunch.cost();
 	}
 	
-	
-	/*
-	public Double totalCostDoubleChicken() {
-		return doubleChickenLunch.cost();
+	public Double totalCostFritsLunch() {
+		return fritsLunch.cost();
 	}
-	*/
 	
 
 }
